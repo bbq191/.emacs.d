@@ -36,5 +36,7 @@
       use-package-daemon nil              ;; 关闭静默
       use-package-expand-minimally t)     ;; 最小化扩展
 
+(require 'use-package)
+
 (provide 'elpa)
 ;; END elpa.el
