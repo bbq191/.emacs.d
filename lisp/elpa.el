@@ -3,7 +3,7 @@
 ;; 需要放到最前面
 (require 'package)
 
-;;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
+;; 防止字节码不兼容，分版本安装到单独目录
 (setq package-user-dir
       (expand-file-name (format "elpa-%s.%s" emacs-major-version emacs-minor-version)
                         user-emacs-directory))
@@ -28,7 +28,7 @@
     (package-refresh-contents)
     (package-install 'use-package))
 
-;; use-package 总配置管理
+;; use-package 全局配置管理
 (setq use-package-always-ensure t         ;; 确保正确安装
       use-package-always-defer t          ;; 开启延时加载
       use-package-enable-imenu-support t  ;; 开启安装菜单栏
