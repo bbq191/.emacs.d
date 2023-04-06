@@ -1,4 +1,8 @@
-;; init-osx-keys.el --- Configure specific to MacOS -*- lexical-binding: t -*-
+;;; init-osx-keys.el --- Configure specific to MacOS -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
+(require 'define)
 
 ;; 改变键盘设置
 (when *is-a-mac*
@@ -8,4 +12,4 @@
 
 (provide 'macos)
 
-;; END macos.el
+;;; macos.el ends here

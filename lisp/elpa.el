@@ -33,8 +33,8 @@
       use-package-always-defer t          ;; 开启延时加载
       use-package-enable-imenu-support t  ;; 开启安装菜单栏
       use-package-verbose t               ;; 开启verbose安装
-      use-package-daemon nil              ;; 关闭静默
-      use-package-expand-minimally t)     ;; 最小化扩展
+      use-package-daemon t                ;; 关闭静默
+      use-package-expand-minimally t)     ;; 最小化宏扩展
 
 (require 'use-package)
 
