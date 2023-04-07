@@ -1,20 +1,10 @@
-;;; init-gui.el --- Beautifl gui  -*- lexical-binding: t -*-
-;;; Commentary:
+;;; init-fonts.el --- Beautifl gui  -*- lexical-binding: t -*-
+;;; Commentary: 最佳字体设置（抄袭改变自 centaur emacs）
 ;;; Code:
 
 (require 'init-const)
 (require 'init-funcs)
 
-;; 加载 doom themes
-(use-package doom-themes
-  :config
-  (load-theme 'doom-one-light t))
-
-;; 加载 doom modeline
-(use-package doom-modeline
-  :hook (after-init . doom-modeline-mode))
-
-;; 最佳字体设置（抄袭自 centaur emacs）
 (defun centaur-setup-fonts ()
   "处理安装各类型字体."
   (when (display-graphic-p)
@@ -57,5 +47,5 @@
 
 
 
-(provide 'gui)
-;;; gui.el ends here
+(provide 'init-fonts)
+;;; init-fonts.el ends here

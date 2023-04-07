@@ -1,16 +1,27 @@
 ;; init-const.el --- Define constants.	-*- lexical-binding: t -*-
-
-;;; Commentary:
-;;
-;; Define constants.
-;;
-
+;;; Commentary: Define constants.
 ;;; Code:
 
+;; System constants
 (defconst sys/macp
   (eq system-type 'darwin)
   "Are we running on a Mac system?")
 
+(defconst sys/mac-x-p
+  (and (display-graphic-p) sys/macp)
+  "Are we running under X on a Mac system?")
+
+(defconst sys/mac-ns-p
+  (eq window-system 'ns)
+  "Are we running on a GNUstep or Macintosh Cocoa display?")
+
+(defconst sys/mac-cocoa-p
+  (featurep 'cocoa)
+  "Are we running with Cocoa on a Mac system?")
+
+(defconst sys/mac-port-p
+  (eq window-system 'mac)
+  "Are we running a macport build on a Mac system?")
 
 (defconst sys/rootp
   (string-equal "root" (getenv "USER"))
@@ -30,5 +41,4 @@
 
 (provide 'init-const)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init-const.el ends here

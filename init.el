@@ -1,8 +1,6 @@
 ;;; init.el --- Load the full configuration -*- lexical-binding: t -*-
-;;; Commentary:
-;;
-;; 学习 CENTAUR EMACS 源码
-;;
+;;; Commentary: 学习改变 CENTAUR EMACS 源码.
+;; 本配置绝大部分都 copy/modify 自 centaur
 ;;; Code:
 
 (when (version< emacs-version "29.1")
@@ -63,22 +61,18 @@ Otherwise the startup will be very slow. "
 
 (update-load-path)
 
-;; 隔离 emacs 自动生成的代码
-(setq custom-file (locate-user-emacs-file "custom.el"))
+;; Basic Packages
+(require 'init-package)
+(require 'init-fonts)
+(require 'init-base)
+(require 'init-hydra)
 
-;; Packages
-;; Without this comment Emacs25 adds (package-initialize) here
-;; (require 'init-package)
+;; Extension Packages
+(require 'init-gui)
+;; (require 'init-edit)
+;; (require 'init-ivy)
+;; (require 'init-company)
 
-(require 'elpa)
-;;(require 'misc)
-(require 'gui)
-;;(require 'macos)
-(require 'editor)
-;;(require 'swiper)
-;;(require 'company)
-;;(require 'program)
-;;(require 'lsp)
 
 (provide 'init.el)
 ;;; init.el ends here

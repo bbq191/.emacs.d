@@ -1,0 +1,7 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/Users/vinci/.config/emacs/lisp/init-custom.el" . 4485)
+ ("/Users/vinci/.config/emacs/lisp/init-hydra.el" . 2239)
+ ("/Users/vinci/.config/emacs/lisp/init-funcs.el" . 986)
+ ("/Users/vinci/.config/emacs/init.el" . 2414)
+ ("/Users/vinci/.config/emacs/lisp/init-gui.el" . 11155)
+ ("/Users/vinci/.config/emacs/lisp/init-base.el" . 7223))
