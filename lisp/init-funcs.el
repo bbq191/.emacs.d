@@ -19,6 +19,11 @@
       (write-region nil nil custom-file)
       (message "Saved %s (%s) to %s" variable value custom-file))))
 
+(defun too-long-file-p ()
+  "Check whether the file is too long."
+  (if (fboundp 'buffer-line-statistics)
+      (> (car (buffer-line-statistics)) 3000)
+    (> (buffer-size) 100000)))
 
 ;; Font
 (defun font-installed-p (font-name)
@@ -40,11 +45,16 @@
                (not (display-graphic-p))))
       (daemonp)))
 
-;; Themes
+(defun childframe-completion-workable-p ()
+  "Whether childframe completion is workable."
+  (and (eq completion-style 'childframe)
+       (childframe-workable-p)))
+
 (defun default--theme-name (theme)
   "Return internal THEME name."
   (or (alist-get theme theme-alist) theme 'doom-one))
 
+;; Themes
 (defun theme-enable-p (theme)
   "The THEME is enabled or not."
   (and theme

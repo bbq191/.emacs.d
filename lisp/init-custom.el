@@ -113,6 +113,12 @@ It's only available on macOS currently."
                     theme-alist)
                  symbol))
 
+(defcustom completion-style 'childframe
+  "Completion display style."
+  :group 'centaur
+  :type '(choice (const :tag "Minibuffer" minibuffer)
+                 (const :tag "Child Frame" childframe)))
+
 (defcustom prettify-symbols-alist
   '(("lambda" . ?λ)
     ("<-"     . ?←)

@@ -457,8 +457,6 @@
 
   ;; Quick launch apps
   (cond
-   (sys/linux-x-p
-    (bind-key "s-<f6>" #'counsel-linux-app counsel-mode-map))
    (sys/macp
     (use-package counsel-osx-app
       :bind (:map counsel-mode-map
@@ -472,47 +470,8 @@
   ;; Tramp ivy interface
   (use-package counsel-tramp
     :bind (:map counsel-mode-map
-           ("C-c c T" . counsel-tramp)))
+           ("C-c c T" . counsel-tramp))))
 
-  ;; Support pinyin in Ivy
-  ;; Input prefix ':' to match pinyin
-  ;; Refer to  https://github.com/abo-abo/swiper/issues/919 and
-  ;; https://github.com/pengpengxp/swiper/wiki/ivy-support-chinese-pinyin
-  (use-package pinyinlib
-    :autoload pinyinlib-build-regexp-string
-    :init
-    (with-no-warnings
-      (defun my-pinyinlib-build-regexp-string (str)
-        "Build a pinyin regexp sequence from STR."
-        (cond ((equal str ".*") ".*")
-              (t (pinyinlib-build-regexp-string str t))))
-
-      (defun my-pinyin-regexp-helper (str)
-        "Construct pinyin regexp for STR."
-        (cond ((equal str " ") ".*")
-              ((equal str "") nil)
-              (t str)))
-
-      (defun pinyin-to-utf8 (str)
-        "Convert STR to UTF-8."
-        (cond ((equal 0 (length str)) nil)
-              ((equal (substring str 0 1) "!")
-               (mapconcat
-                #'my-pinyinlib-build-regexp-string
-                (remove nil (mapcar
-                             #'my-pinyin-regexp-helper
-                             (split-string
-                              (replace-regexp-in-string "!" "" str )
-                              "")))
-                ""))
-              (t nil)))
-
-      (defun my-ivy--regex-pinyin (fn str)
-        "The regex builder advice to support pinyin."
-        (or (pinyin-to-utf8 str)
-            (funcall fn str)))
-      (advice-add #'ivy--regex-plus :around #'my-ivy--regex-pinyin)
-      (advice-add #'ivy--regex-ignore-order :around #'my-ivy--regex-pinyin))))
 
 ;; Use Ivy to open recent directories
 (use-package ivy-dired-history
@@ -540,10 +499,10 @@
 ;; Enable it before`ivy-rich-mode' for better performance
 (use-package all-the-icons-ivy-rich
   :hook (ivy-mode . all-the-icons-ivy-rich-mode)
-  :init (setq all-the-icons-ivy-rich-icon centaur-icon)
+  :init (setq all-the-icons-ivy-rich-icon my-icon)
   :config
   (plist-put all-the-icons-ivy-rich-display-transformers-list
-             'centaur-load-theme
+             'my-load-theme
              '(:columns
                ((all-the-icons-ivy-rich-theme-icon)
                 (ivy-rich-candidate))
@@ -619,5 +578,4 @@
 
 (provide 'init-ivy)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; init-ivy.el ends here

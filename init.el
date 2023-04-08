@@ -69,8 +69,8 @@ Otherwise the startup will be very slow. "
 
 ;; Extension Packages
 (require 'init-gui)
-;; (require 'init-edit)
-;; (require 'init-ivy)
+(require 'init-edit)
+(require 'init-ivy)
 ;; (require 'init-company)
 
 
