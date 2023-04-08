@@ -1,6 +1,7 @@
 # Emacs 小白个人配置
 
-> 90% 的配置内容来源于 centura ，少部分来源于 purcell
+> 配置内容来源于 centura，少部分来源于 purcell
+> 感谢大佬们的源码，让我有学习的机会。
 
 1. 基础配置
 
@@ -15,9 +16,13 @@
 2. 核心组件
 
   - [x] Hydra
-  - [] swiper 三剑客
+  - [x] swiper 三剑客
   - [] ace-window
-  - [] company
 
 3. 开发相关
+
+  - [x] company
+  - [x] yasnippet
+  - [x] bookmark
+
 4. 语言支持

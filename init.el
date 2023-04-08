@@ -78,7 +78,7 @@ Otherwise the startup will be very slow. "
 (require 'init-bookmark)
 ;;(require 'init-calendar)
 ;;(require 'init-dashboard)
-;;(require 'init-dired)
+(require 'init-dired)
 ;;(require 'init-highlight)
 ;;(require 'init-ibuffer)
 ;;(require 'init-kill-ring)
