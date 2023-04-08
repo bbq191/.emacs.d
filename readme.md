@@ -17,12 +17,17 @@
 
   - [x] Hydra
   - [x] swiper 三剑客
-  - [] ace-window
+  - [x] editor
 
 3. 开发相关
 
   - [x] company
   - [x] yasnippet
   - [x] bookmark
+  - [x] dired
+  - [] highlight
+  - [] ibuffer
+  - [] killring
+
 
 4. 语言支持
