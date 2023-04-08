@@ -71,8 +71,20 @@ Otherwise the startup will be very slow. "
 (require 'init-gui)
 (require 'init-edit)
 (require 'init-ivy)
-;; (require 'init-company)
 
+;; Program Tools
+(require 'init-company)
+(require 'init-yasnippet)
+(require 'init-bookmark)
+;;(require 'init-calendar)
+;;(require 'init-dashboard)
+;;(require 'init-dired)
+;;(require 'init-highlight)
+;;(require 'init-ibuffer)
+;;(require 'init-kill-ring)
+;;(require 'init-persp)
+;;(require 'init-window)
+;;(require 'init-treemacs)
 
 (provide 'init.el)
 ;;; init.el ends here
