@@ -1,6 +1,7 @@
 
 ;; ----- amx-history -----
 (
+ package-refresh-contents
  cd
  5x5
  amx
@@ -20,10 +21,9 @@
  pwd
  rsh
  sdb
- xdb
 )
 
 ;; ----- amx-data -----
 (
- 
+ (package-refresh-contents . 1)
 )
