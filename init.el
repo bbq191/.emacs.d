@@ -81,9 +81,9 @@ Otherwise the startup will be very slow. "
 (require 'init-dired)
 (require 'init-highlight)
 (require 'init-kill-ring)
-;;(require 'init-ibuffer)
+(require 'init-ibuffer)
 ;;(require 'init-persp)
-;;(require 'init-window)
+(require 'init-window)
 ;;(require 'init-treemacs)
 
 (provide 'init.el)
