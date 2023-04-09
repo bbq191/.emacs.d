@@ -90,7 +90,7 @@ Otherwise the startup will be very slow. "
 (require 'init-vcs)
 
 ;; System Extension
-;;(require 'init-utils)
+(require 'init-utils)
 ;;(require 'init-markdown)
 ;;(require 'init-org)
 ;;(require 'init-reader)
