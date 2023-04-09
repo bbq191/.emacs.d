@@ -86,6 +86,34 @@ Otherwise the startup will be very slow. "
 ;; Project Helper
 (require 'init-window)
 (require 'init-treemacs)
+;;(require 'init-projectile)
+;;(require 'init-vcs)
+
+;;(require 'init-markdown)
+;;(require 'init-org)
+;;(require 'init-reader)
+
+;;(require 'init-dict)
+;;(require 'init-docker)
+;;(require 'init-player)
+;;(require 'init-utils)
+
+;; Programming
+;;(require 'init-flycheck)
+;;(require 'init-lsp)
+;;(require 'init-ctags)
+
+;; Language
+;;(require 'init-prog)
+;;(require 'init-elisp)
+;;(require 'init-c)
+;;(require 'init-go)
+;;(require 'init-rust)
+;;(require 'init-python)
+;;(require 'init-ruby)
+;;(require 'init-dart)
+;;(require 'init-elixir)
+;;(require 'init-web)
 
 (provide 'init.el)
 ;;; init.el ends here
