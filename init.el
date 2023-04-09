@@ -82,9 +82,10 @@ Otherwise the startup will be very slow. "
 (require 'init-highlight)
 (require 'init-kill-ring)
 (require 'init-ibuffer)
-;;(require 'init-persp)
+
+;; Project Helper
 (require 'init-window)
-;;(require 'init-treemacs)
+(require 'init-treemacs)
 
 (provide 'init.el)
 ;;; init.el ends here
