@@ -1,0 +1,29 @@
+
+;; ----- amx-history -----
+(
+ cd
+ 5x5
+ amx
+ arp
+ dbx
+ dig
+ erc
+ ert
+ eww
+ ftp
+ gdb
+ irc
+ jdb
+ man
+ mpc
+ pdb
+ pwd
+ rsh
+ sdb
+ xdb
+)
+
+;; ----- amx-data -----
+(
+ 
+)
