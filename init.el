@@ -100,7 +100,7 @@ Otherwise the startup will be very slow. "
 ;;(require 'init-player)
 
 ;; Programming
-;;(require 'init-flycheck)
+(require 'init-flycheck)
 ;;(require 'init-lsp)
 ;;(require 'init-ctags)
 

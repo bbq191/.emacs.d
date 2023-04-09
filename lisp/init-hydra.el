@@ -35,7 +35,7 @@
   ;; Global toggles
   (with-no-warnings
     (pretty-hydra-define toggles-hydra (:title (pretty-hydra-title "Toggles" 'faicon "toggle-on" :v-adjust -0.1)
-                                        :color amaranth :quit-key ("q" "C-g"))
+                                               :color amaranth :quit-key ("q" "C-g"))
       ("Basic"
        (("n" (cond ((fboundp 'display-line-numbers-mode)
                     (display-line-numbers-mode (if display-line-numbers-mode -1 1)))
@@ -47,7 +47,7 @@
         ("a" global-aggressive-indent-mode "aggressive indent" :toggle t)
         ("d" global-hungry-delete-mode "hungry delete" :toggle t)
         ("e" electric-pair-mode "electric pair" :toggle t)
-        ("c" flyspell-mode "spell check" :toggle t)
+        ;; ("c" flyspell-mode "spell check" :toggle t)
         ("s" prettify-symbols-mode "pretty symbol" :toggle t)
         ("l" global-page-break-lines-mode "page break lines" :toggle t)
         ("b" display-battery-mode "battery" :toggle t)
