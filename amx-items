@@ -1,0 +1,31 @@
+
+;; ----- amx-history -----
+(
+ ibuffer
+ package-refresh-contents
+ magit
+ cd
+ 5x5
+ amx
+ arp
+ dbx
+ dig
+ erc
+ ert
+ eww
+ ftp
+ gdb
+ irc
+ jdb
+ man
+ mpc
+ pdb
+ pwd
+)
+
+;; ----- amx-data -----
+(
+ (magit . 1)
+ (package-refresh-contents . 1)
+ (ibuffer . 1)
+)

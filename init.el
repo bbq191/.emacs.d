@@ -86,9 +86,11 @@ Otherwise the startup will be very slow. "
 ;; Project Helper
 (require 'init-window)
 (require 'init-treemacs)
-;;(require 'init-projectile)
-;;(require 'init-vcs)
+(require 'init-projectile)
+(require 'init-vcs)
 
+;; System Extension
+;;(require 'init-utils)
 ;;(require 'init-markdown)
 ;;(require 'init-org)
 ;;(require 'init-reader)
@@ -96,7 +98,6 @@ Otherwise the startup will be very slow. "
 ;;(require 'init-dict)
 ;;(require 'init-docker)
 ;;(require 'init-player)
-;;(require 'init-utils)
 
 ;; Programming
 ;;(require 'init-flycheck)
