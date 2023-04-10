@@ -119,6 +119,32 @@ It's only available on macOS currently."
   :type '(choice (const :tag "Minibuffer" minibuffer)
                  (const :tag "Child Frame" childframe)))
 
+;; programing
+(defcustom my-lsp 'lsp-mode
+  "Set language server.
+
+`lsp-mode': See https://github.com/emacs-lsp/lsp-mode.
+`eglot': See https://github.com/joaotavora/eglot.
+tags: Use tags file instead of language server. See https://github.com/universal-ctags/citre.
+nil means disabled."
+  :group 'centaur
+  :type '(choice (const :tag "LSP Mode" lsp-mode)
+                 (const :tag "Eglot" eglot)
+                 (const :tag "Disable" nil)))
+
+(defcustom lsp-format-on-save nil
+  "Auto format buffers on save."
+  :group 'centaur
+  :type 'boolean)
+
+(defcustom lsp-format-on-save-ignore-modes
+  '(c-mode c++-mode python-mode markdown-mode)
+  "The modes that don't auto format and organize imports while saving the buffers.
+`prog-mode' means ignoring all derived modes."
+  :group 'centaur
+  :type '(repeat (symbol :tag "Major-Mode")))
+
+;; symbol
 (defcustom prettify-symbols-alist
   '(("lambda" . ?λ)
     ("<-"     . ?←)

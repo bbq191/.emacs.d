@@ -1,6 +1,7 @@
 
 ;; ----- amx-history -----
 (
+ recentf
  ibuffer
  package-refresh-contents
  magit
@@ -20,7 +21,6 @@
  man
  mpc
  pdb
- pwd
 )
 
 ;; ----- amx-data -----
@@ -28,4 +28,5 @@
  (magit . 1)
  (package-refresh-contents . 1)
  (ibuffer . 1)
+ (recentf . 1)
 )

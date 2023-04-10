@@ -101,7 +101,7 @@ Otherwise the startup will be very slow. "
 
 ;; Programming
 (require 'init-flycheck)
-;;(require 'init-lsp)
+(require 'init-lsp)
 ;;(require 'init-ctags)
 
 ;; Language
