@@ -131,6 +131,13 @@
   (set-variable 'my-theme theme no-save))
 
 
+(defun my-treesit-available-p ()
+  "Check whether tree-sitter is available.
+Native tree-sitter is introduced since 29."
+  (and (fboundp 'treesit-available-p)
+       (treesit-available-p)))
+
+
 ;; Pakcage repository (ELPA)
 (defun set-package-archives (archives &optional refresh async no-save)
   "Set the package archives (ELPA).

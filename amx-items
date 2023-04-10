@@ -1,11 +1,9 @@
 
 ;; ----- amx-history -----
 (
- recentf
- ibuffer
  package-refresh-contents
- magit
  cd
+ rg
  5x5
  amx
  arp
@@ -18,15 +16,14 @@
  gdb
  irc
  jdb
+ lsp
  man
  mpc
  pdb
+ pwd
 )
 
 ;; ----- amx-data -----
 (
- (magit . 1)
  (package-refresh-contents . 1)
- (ibuffer . 1)
- (recentf . 1)
 )

@@ -102,19 +102,19 @@ Otherwise the startup will be very slow. "
 ;; Programming
 (require 'init-flycheck)
 (require 'init-lsp)
-;;(require 'init-ctags)
+(require 'init-ctags)
 
 ;; Language
-;;(require 'init-prog)
+(require 'init-prog)
 ;;(require 'init-elisp)
-;;(require 'init-c)
-;;(require 'init-go)
-;;(require 'init-rust)
-;;(require 'init-python)
+(require 'init-cpp)
+(require 'init-go)
+(require 'init-rust)
+(require 'init-python)
 ;;(require 'init-ruby)
 ;;(require 'init-dart)
 ;;(require 'init-elixir)
-;;(require 'init-web)
+(require 'init-web)
 
 (provide 'init.el)
 ;;; init.el ends here

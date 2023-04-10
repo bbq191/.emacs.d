@@ -144,6 +144,13 @@ nil means disabled."
   :group 'centaur
   :type '(repeat (symbol :tag "Major-Mode")))
 
+(defcustom my-tree-sitter t
+  "Enable tree-sitter or not.
+Native tree-sitter is introduced in 29."
+  :group 'centaur
+  :type 'boolean)
+
+
 ;; symbol
 (defcustom prettify-symbols-alist
   '(("lambda" . ?λ)
